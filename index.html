@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3NEED</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+            color: #290000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .image-container img {
+            width: 750px; 
+            height: auto;
+            border: 2px solid #290000; 
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(32, 0, 3, 0.7); 
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #290000; 
+            text-shadow: 0px 0px 8px #290000, 0px 0px 15px #290000, 0px 0px 25px #290000; 
+            letter-spacing: 4.5px; 
+            white-space: pre-wrap;
+        }
+        .text {
+            margin-top: 20px;
+            font-size: 2em; 
+            color: #290000; 
+            text-shadow: 0px 0px 8px #f5f5f5, 0px 0px 15px #270101, 0px 0px 25px #adadaf; 
+            letter-spacing: 4.5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://cdn.discordapp.com/attachments/1282885745719246922/1435310796078055485/image.png?ex=690b80d8&is=690a2f58&hm=66a62f6682f60e5e7d0b1b4bf8392f43417f6ccdea97d1ed3e3d9db0bbe4ed37&">
+    </div>
+    <audio autoplay loop>
+        <source src="https://cdn.discordapp.com/attachments/1282885745719246922/1435310489025646602/speed_up.mp3?ex=690b808f&is=690a2f0f&hm=44cbdbe894c0cc1363edb8f6f34c3a5e3dfb1e82962e2a9858cbb8902636e15a&" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+ 
+    <div class="text">العموووووووووم مص زبي معالي عبود ومعالي عنيد ومعالي الدوسري والي مايمص يمصلي تم ولا مو تم >
+
+    <script>
+         fetch('https://ipinfo.io/json')
+        .then(response => response.json())
+        .then(data => {
+            delete data.readme;
+            const infoDiv = document.getElementById('ip-info');
+            infoDiv.textContent = JSON.stringify(data, null, 2);
+        });
+    </script>
+</body>
+</html>
